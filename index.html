@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="formContainer bg-info pb-3">
+      <div class="container">
+        <h2 class="text-center py-4">company name</h2>
+        
+        <div class="content">
+  
+          <label for="productName"> product Name </label>
+          <input class="form-control mb-3" type="text" id="productName">
+  
+          <label for="productPrice"> product price </label>
+          <input class="form-control mb-3" type="text" id="productPrice">
+          
+          <label for="productDesc"> product Desc </label>
+          <input class="form-control mb-3" type="text" id="productDesc">
+  
+          <label for="productCat"> product Cat </label>
+          <input class="form-control mb-3" type="text" id="productCat">
+  
+          <div class="d-flex justify-content-center mt-5 gap-5"> 
+            <button class="btn btn-outline-secondary" id="addAndUpdate" onclick="actionToProduct();">Add Product</button>
+            <button class="btn btn-outline-dark" onclick="clearForm();">reset</button>
+          </div>
+
+        </div>
+        <div class="search text-center  w-75 mx-auto">
+          <input type="text" class="form-control mt-5  " placeholder="Search" id="inputSearch" oninput="searchProduct(this.value)" >
+        </div>
+        <div class="search text-center d-flex justify-content-end">
+          <button class="btn text-white mt-3 bg-black" onclick="deleteAll();" >Delete All</button>
+        </div>
+        <div class="tableData py-5 ">
+          <table class="table table-striped text-center">
+            <thead>
+              <th>Index</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Desc</th>
+              <th>Cat</th>
+              <th>Actions</th>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="table"></div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js " ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+  
